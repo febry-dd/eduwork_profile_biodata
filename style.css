@@ -22,8 +22,6 @@ body {
 
 /* NAVBAR */
 .navbar {
-    position: sticky;
-    top: 0;
     z-index: 100;
     background: #ffffff;
     border-bottom: 1px solid #e6e9ef;
@@ -31,9 +29,6 @@ body {
 
 .nav-content {
     min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .logo {
@@ -44,20 +39,7 @@ body {
 }
 
 nav {
-    display: flex;
-    gap: 28px;
-}
-
-nav a {
-    color: #4b5563;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.2s;
-}
-
-nav a:hover {
-    color: #243b8f;
+    gap: 12px;
 }
 
 /* HERO */
@@ -67,10 +49,7 @@ nav a:hover {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 55px;
 }
 
 .greeting {
@@ -106,6 +85,11 @@ nav a:hover {
     border-radius: 8px;
     font-weight: 700;
     transition: 0.2s;
+}
+
+.portfolio-detail {
+    margin-top: 12px;
+    padding: 8px 14px;
 }
 
 .btn:hover {
@@ -197,6 +181,15 @@ nav a:hover {
     font-size: 14px;
 }
 
+.biodata-icon {
+    display: inline-block;
+    width: 24px;
+    margin-right: 6px;
+    color: #5267bd;
+    font-size: 16px;
+    text-align: center;
+}
+
 .biodata-table td {
     width: 34%;
     color: #626c78;
@@ -205,9 +198,7 @@ nav a:hover {
 
 /* PORTFOLIO */
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    align-items: stretch;
 }
 
 .portfolio-card {
@@ -216,6 +207,10 @@ nav a:hover {
     border-radius: 14px;
     overflow: hidden;
     transition: 0.25s;
+}
+
+.portfolio-card > img {
+    height: 200px;
 }
 
 .portfolio-card:hover {
@@ -263,11 +258,7 @@ footer {
         gap: 35px;
     }
 
-    .portfolio-grid {
-        gap: 18px;
-    }
-
-    .portfolio-card img {
+    .portfolio-card > img {
         height: 170px;
     }
 }
@@ -275,25 +266,15 @@ footer {
 /* RESPONSIVE: mobile */
 @media (max-width: 800px) {
     .nav-content {
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
         padding: 12px 0;
     }
 
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .navbar-nav {
+        padding-top: 10px;
     }
 
     .hero {
         padding: 55px 0;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 35px;
     }
 
     .hero-text {
@@ -303,10 +284,6 @@ footer {
     .hero-text > p:not(.greeting) {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
     }
 
     .biodata-table th,
@@ -322,14 +299,6 @@ footer {
 
     .logo {
         font-size: 20px;
-    }
-
-    nav {
-        gap: 10px 14px;
-    }
-
-    nav a {
-        font-size: 13px;
     }
 
     .hero {
@@ -362,7 +331,324 @@ footer {
         padding: 13px 14px;
     }
 
-    .portfolio-card img {
+    .portfolio-card > img {
         height: 190px;
+    }
+}
+
+/* MODERN VISUAL OVERRIDES */
+:root {
+    --ink: #17232d;
+    --muted: #65727c;
+    --paper: #f5f8f6;
+    --surface: #ffffff;
+    --line: #dce7e2;
+    --teal: #167d72;
+    --teal-dark: #0f625a;
+    --coral: #ee876d;
+    --soft-teal: #e2f1ed;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+}
+
+.nav-content {
+    min-height: 76px;
+}
+
+.logo {
+    color: var(--teal);
+    letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 13px;
+    border-radius: 999px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--teal-dark);
+    background: var(--soft-teal);
+}
+
+.navbar-toggler {
+    border-color: var(--line);
+    padding: 7px 9px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 104px 0 116px;
+    background: linear-gradient(135deg, #ffffff 0%, #eef8f4 100%);
+}
+
+.hero::after {
+    position: absolute;
+    right: -8%;
+    bottom: -45%;
+    width: 58%;
+    height: 90%;
+    border: 1px solid rgba(22, 125, 114, 0.1);
+    border-radius: 50%;
+    content: "";
+    transform: rotate(-12deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.greeting,
+.section-title span {
+    color: var(--coral);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.greeting {
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    max-width: 650px;
+    color: var(--ink);
+    font-size: clamp(2.5rem, 5vw, 4.7rem);
+    letter-spacing: -2px;
+}
+
+.hero h2 {
+    color: var(--teal);
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+}
+
+.hero-text > p:not(.greeting) {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image::before {
+    position: absolute;
+    top: 12%;
+    right: 4%;
+    width: 92%;
+    height: 86%;
+    border: 2px solid var(--coral);
+    border-radius: 24px;
+    content: "";
+    transform: rotate(4deg);
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 1;
+    max-width: 470px;
+    border: 10px solid var(--surface);
+    border-radius: 24px;
+    box-shadow: 0 24px 55px rgba(28, 74, 67, 0.18);
+}
+
+.btn {
+    border: 0;
+    border-radius: 999px;
+    background: var(--teal);
+    padding: 13px 23px;
+    box-shadow: 0 8px 18px rgba(22, 125, 114, 0.18);
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--teal-dark);
+    box-shadow: 0 10px 22px rgba(22, 125, 114, 0.28);
+}
+
+.section {
+    padding: 96px 0;
+}
+
+.section-title {
+    margin-bottom: 42px;
+}
+
+.section-title h2 {
+    color: var(--ink);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    letter-spacing: -0.8px;
+}
+
+.section-title p,
+.portfolio-content p {
+    color: var(--muted);
+}
+
+.about-card {
+    max-width: 780px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 34px;
+    color: var(--muted);
+    background: var(--surface);
+    box-shadow: 0 18px 45px rgba(28, 74, 67, 0.06);
+}
+
+.biodata-section {
+    background: #eaf4f0;
+}
+
+.biodata-table {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: 0 18px 45px rgba(28, 74, 67, 0.07);
+}
+
+.biodata-table th,
+.biodata-table td {
+    border-color: var(--line);
+    padding: 19px 20px;
+}
+
+.biodata-table th {
+    background: #f4faf7;
+    color: var(--ink);
+}
+
+.biodata-table td {
+    color: var(--muted);
+}
+
+.biodata-icon {
+    color: var(--teal);
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: 0 12px 30px rgba(28, 74, 67, 0.05);
+}
+
+.portfolio-card:hover {
+    box-shadow: 0 18px 38px rgba(28, 74, 67, 0.14);
+}
+
+.portfolio-card > img {
+    height: 215px;
+    border-bottom: 1px solid var(--line);
+}
+
+.portfolio-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+.portfolio-content h3 {
+    color: var(--ink);
+}
+
+.portfolio-content p {
+    flex: 1;
+}
+
+.portfolio-detail {
+    margin-top: 15px;
+    background: var(--soft-teal);
+    color: var(--teal-dark);
+    box-shadow: none;
+}
+
+.portfolio-detail:hover,
+.portfolio-detail:focus-visible {
+    background: var(--teal);
+    color: #ffffff;
+}
+
+.modal-content {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+}
+
+.modal-title {
+    color: var(--ink);
+}
+
+.modal-body {
+    color: var(--muted);
+}
+
+footer {
+    background: var(--ink);
+    color: #dcece7;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        padding: 74px 0 86px;
+    }
+
+    .hero-image::before {
+        right: 0;
+    }
+
+    .hero-text > p:not(.greeting) {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-image img {
+        border-width: 7px;
+    }
+
+    .about-card {
+        padding: 25px 20px;
+    }
+
+    .biodata-table th,
+    .biodata-table td {
+        padding: 15px;
     }
 }
