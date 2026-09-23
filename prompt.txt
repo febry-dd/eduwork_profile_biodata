@@ -1,0 +1,4 @@
+TUGAS :
+1. Berikan gambar pada foto profile dan portofolio
+2. Buat halaman responsive agar terlihat baik di berbagai perangkat (desktop, tablet, dan mobile)
+menggunakan media queries.

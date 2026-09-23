@@ -253,7 +253,26 @@ footer {
     font-size: 13px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE: tablet */
+@media (max-width: 1024px) {
+    .container {
+        width: min(920px, 88%);
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .portfolio-grid {
+        gap: 18px;
+    }
+
+    .portfolio-card img {
+        height: 170px;
+    }
+}
+
+/* RESPONSIVE: mobile */
 @media (max-width: 800px) {
     .nav-content {
         flex-direction: column;
@@ -293,5 +312,57 @@ footer {
     .biodata-table th,
     .biodata-table td {
         min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: min(100% - 32px, 420px);
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 42px 0;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-image img {
+        border-width: 5px;
+        border-radius: 14px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .about-card {
+        padding: 22px 18px;
+    }
+
+    .biodata-table th,
+    .biodata-table td {
+        padding: 13px 14px;
+    }
+
+    .portfolio-card img {
+        height: 190px;
     }
 }
