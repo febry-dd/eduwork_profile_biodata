@@ -560,6 +560,47 @@ h3,
     box-shadow: 0 12px 30px rgba(28, 74, 67, 0.05);
 }
 
+.portfolio-carousel {
+    max-width: 980px;
+    margin: 0 auto 52px;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 18px 42px rgba(28, 74, 67, 0.14);
+}
+
+.portfolio-carousel .carousel-item {
+    height: 390px;
+    background: var(--ink);
+}
+
+.portfolio-carousel img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.72;
+}
+
+.portfolio-carousel .carousel-caption {
+    right: 10%;
+    bottom: 13%;
+    left: 10%;
+    text-align: left;
+}
+
+.portfolio-carousel .carousel-caption h3 {
+    color: #ffffff;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-carousel .carousel-caption p {
+    max-width: 430px;
+    color: #eef8f4;
+}
+
+.portfolio-carousel .carousel-indicators {
+    z-index: 2;
+}
+
 .portfolio-card:hover {
     box-shadow: 0 18px 38px rgba(28, 74, 67, 0.14);
 }
@@ -632,6 +673,14 @@ footer {
     .section {
         padding: 70px 0;
     }
+
+    .portfolio-carousel {
+        margin-bottom: 40px;
+    }
+
+    .portfolio-carousel .carousel-item {
+        height: 300px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -645,6 +694,18 @@ footer {
 
     .about-card {
         padding: 25px 20px;
+    }
+
+    .portfolio-carousel .carousel-item {
+        height: 250px;
+    }
+
+    .portfolio-carousel .carousel-caption {
+        bottom: 16%;
+    }
+
+    .portfolio-carousel .carousel-caption p {
+        display: none;
     }
 
     .biodata-table th,

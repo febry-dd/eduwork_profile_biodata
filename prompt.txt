@@ -1,4 +1,0 @@
-TUGAS :
-1. Rubah tampilan sebelumnya menggunakan boostrap
-2. Pastikan responsivenya berjalan dengan baik
-3. Tambahkan popup modal
